@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/space16"
+    android:orientation="vertical"
+    tools:context=".BookEditorActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/book_information_title"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space8">
+
+        <TextView
+            android:layout_width="@dimen/space0"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:fontFamily="@string/condensed_font"
+            android:text="@string/name"
+            android:textAlignment="center"
+            android:textColor="@color/colorFormText"
+            android:textSize="@dimen/size16" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/space0"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/book_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/your_book_name"
+                android:textSize="@dimen/size14"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/error_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="@dimen/size11"
+                android:visibility="gone"
+                tools:text="Error enter valid name" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space8">
+
+        <TextView
+            android:layout_width="@dimen/space0"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:fontFamily="@string/condensed_font"
+            android:text="@string/price"
+            android:textAlignment="center"
+            android:textColor="@color/colorFormText"
+            android:textSize="@dimen/size16" />
+
+        <LinearLayout
+            android:layout_width="@dimen/space0"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/book_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/your_book_price"
+                android:inputType="number"
+                android:textSize="@dimen/size14"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/error_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="@dimen/size11"
+                android:visibility="gone"
+                tools:text="Error enter valid price" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space8">
+
+        <TextView
+            android:layout_width="@dimen/space0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@string/condensed_font"
+            android:text="@string/quantity"
+            android:textAlignment="center"
+            android:textColor="@color/colorFormText"
+            android:textSize="@dimen/size16" />
+
+        <RelativeLayout
+
+            android:layout_width="@dimen/space0"
+            android:layout_height="wrap_content"
+            android:layout_weight="2">
+
+            <Button
+                android:id="@+id/minus_btn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="@string/minus"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/quantity_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/space5"
+                android:layout_marginRight="@dimen/space5"
+                android:layout_toEndOf="@id/minus_btn"
+                android:layout_toRightOf="@id/minus_btn"
+                android:fontFamily="@string/condensed_font"
+                android:text="@string/zero"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/size16"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/plus_btn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_toEndOf="@id/quantity_num"
+                android:layout_toRightOf="@id/quantity_num"
+                android:text="@string/plus"
+                android:textColor="@android:color/white" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/supplier_information_title"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space8">
+
+        <TextView
+            android:layout_width="@dimen/space0"
+
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:fontFamily="@string/condensed_font"
+            android:text="@string/supplier"
+            android:textAlignment="center"
+            android:textColor="@color/colorFormText"
+            android:textSize="@dimen/size16" />
+
+        <LinearLayout
+            android:layout_width="@dimen/space0"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/book_supplier"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/book_provider"
+                android:textSize="@dimen/size14"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/error_supplier_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="@dimen/size11"
+                android:visibility="gone"
+                tools:text="Error enter valid Supplier Name" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space8">
+
+        <TextView
+            android:layout_width="@dimen/space0"
+
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:fontFamily="@string/condensed_font"
+            android:text="@string/supplier_number"
+            android:textAlignment="center"
+            android:textColor="@color/colorFormText"
+            android:textSize="@dimen/size16" />
+
+        <LinearLayout
+            android:layout_width="@dimen/space0"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/book_supplier_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/supplier_phone_number"
+                android:inputType="number"
+                android:textSize="@dimen/size14"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/error_supplier_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="@dimen/size11"
+                android:visibility="gone"
+                tools:text="Error enter valid Supplier Number" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/supplier_order_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:text="@string/supplier_order_btn"
+        android:textColor="@android:color/white"
+        tools:ignore="RtlHardcoded" />
+
+    <RelativeLayout
+        android:layout_width="@dimen/space100"
+        android:layout_height="@dimen/space120"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/space16">
+
+        <ImageView
+            android:id="@+id/book_image"
+            android:layout_width="@dimen/space100"
+            android:layout_height="@dimen/space120"
+            android:background="@android:drawable/dialog_holo_light_frame"
+            android:scaleType="centerCrop"
+            android:src="@drawable/no_image" />
+
+        <ImageView
+            android:id="@+id/add_image"
+            android:layout_width="@dimen/space16"
+            android:layout_height="@dimen/space16"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="@dimen/space10"
+            android:layout_marginRight="@dimen/space10"
+            android:layout_marginTop="@dimen/space16"
+            android:src="@drawable/add" />
+
+    </RelativeLayout>
+
+</LinearLayout>

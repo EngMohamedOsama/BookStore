@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/space100"
+    android:layout_margin="@dimen/space8">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/itemBackground">
+
+        <ImageView
+            android:id="@+id/item_image"
+            android:layout_width="@dimen/space88"
+            android:layout_height="@dimen/space100"
+            android:scaleType="centerCrop"
+            android:src="@drawable/no_image" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/space8"
+            android:layout_marginStart="@dimen/space8"
+            android:layout_toEndOf="@id/item_image"
+            android:layout_toRightOf="@id/item_image"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/size20"
+                android:textStyle="bold"
+                tools:text="Product Name" />
+
+            <TextView
+
+                android:id="@+id/item_quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/item_name"
+                android:layout_marginTop="2dp"
+                android:textColor="@color/inStock"
+                android:textStyle="bold"
+                tools:text="In Stock : 5 remain" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/item_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/space8"
+                android:textColor="@color/priceColor"
+                android:textSize="@dimen/size18"
+                android:textStyle="bold"
+                tools:text="35$" />
+
+            <Button
+                android:id="@+id/buy_now"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/space8"
+                android:layout_marginRight="@dimen/space8"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:text="@string/buy_now"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
